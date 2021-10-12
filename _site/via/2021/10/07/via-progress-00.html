@@ -80,9 +80,10 @@ Hopefully, he’ll forgive me, and it’ll turn out alright.</p>
 whenever two vehicles are due to arrive at a station at the same time. If there are any users online,
 we can offer them to place a bet on which one will arrive at its destination sooner. If we want to get
 really creative, we can offer different odds based on what other people are betting and on historical
-data. Each user starts with some sort of capital, which they then acquire more if they bet correctly
+data. Each user starts with some amount of coins, which they then acquire more if they bet correctly
 and lose if they bet incorrectly. Most importantly, if they are very good at predicting the outcomes,
-they get to have bragging rights.</p>
+they get to have bragging rights. Of course, there also needs to be a way to get more coins if you lose
+everything.</p>
 
 <p>Is this idea silly? Yes! Is it going to be fun to do? I hope so! And if not, well, it at least
 fulfills the requirements.</p>
@@ -99,7 +100,7 @@ and we’re going to need some kind of map API. I’ll choose one when I get to 
 
 <p>For our own API, we’re going to need to send message back and forth between the client and the server.
 The client wants to receive a possible bet as soon as it is available. The client then wants to send
-the amount and the vehicle it is betting on. Last but not least, the client also wants to get notifications once
+the amount of coins and the vehicle it is betting on. They also want to get notifications immediately once
 they win or lose. The client data also needs to be persistent, stored safely in a database.</p>
 
 <p>I believe this is enough of the specifications for now. I’ll return next week, maybe even with mockups! We’ll see.</p>
