@@ -2,3 +2,6 @@
 *.iml
 .idea
 vendor
+
+# _site is statically generated on build
+_site/
