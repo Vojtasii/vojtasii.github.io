@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Hello everyone!" />
 <meta property="og:description" content="Hello everyone!" />
-<link rel="canonical" href="http://localhost:4000/via/progress/2021/10/07/via-progress-00.html" />
-<meta property="og:url" content="http://localhost:4000/via/progress/2021/10/07/via-progress-00.html" />
+<link rel="canonical" href="http://localhost:4000/via/2021/10/07/via-progress-00.html" />
+<meta property="og:url" content="http://localhost:4000/via/2021/10/07/via-progress-00.html" />
 <meta property="og:site_name" content="Vojta Tollar’s blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-10-07T15:55:32+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="VIA progress #0" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"VIA progress #0","dateModified":"2021-10-07T15:55:32+02:00","datePublished":"2021-10-07T15:55:32+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/via/progress/2021/10/07/via-progress-00.html"},"description":"Hello everyone!","url":"http://localhost:4000/via/progress/2021/10/07/via-progress-00.html","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","headline":"VIA progress #0","dateModified":"2021-10-07T15:55:32+02:00","datePublished":"2021-10-07T15:55:32+02:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/via/2021/10/07/via-progress-00.html"},"description":"Hello everyone!","url":"http://localhost:4000/via/2021/10/07/via-progress-00.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Vojta Tollar's blog" /></head>
 <body><header class="site-header" role="banner">
@@ -72,9 +72,39 @@ I wanted my focus to be on Prague, and they are easily accessible.</p>
 I sincerely apologise to our tutor for this, since I was not able to confirm the topic with him.
 Hopefully, he’ll forgive me, and it’ll turn out alright.</p>
 
-<p>The topic I’ve chosen is <strong>Public transport racing</strong>.</p>
+<p>The topic I’ve chosen is <strong>Public transport racing bets</strong>.</p>
 
-  </div><a class="u-url" href="/via/progress/2021/10/07/via-progress-00.html" hidden></a>
+<p>What does that mean?</p>
+
+<p>The idea is to create a sort of game. Using the real time public transport locations, we can detect
+whenever two vehicles are due to arrive at a station at the same time. If there are any users online,
+we can offer them to place a bet on which one will arrive at its destination sooner. If we want to get
+really creative, we can offer different odds based on what other people are betting and on historical
+data. Each user starts with some sort of capital, which they then acquire more if they bet correctly
+and lose if they bet incorrectly. Most importantly, if they are very good at predicting the outcomes,
+they get to have bragging rights.</p>
+
+<p>Is this idea silly? Yes! Is it going to be fun to do? I hope so! And if not, well, it at least
+fulfills the requirements.</p>
+
+<h3 id="technical-implementation">Technical implementation</h3>
+
+<p>I have not fully committed on what kind of tech stack I should be using. I would prefer to work
+mostly in TypeScript, so I think node.js server with express and with React frontend would be the
+safest choice. I don’t have any experience with React yet, but we are here to learn.</p>
+
+<p>In terms of APIs, one is going to be the public transport locations from
+<a href="https://golemioapi.docs.apiary.io/#reference/public-transport/realtime-vehicle-positions">Golemio</a>
+and we’re going to need some kind of map API. I’ll choose one when I get to that point.</p>
+
+<p>For our own API, we’re going to need to send message back and forth between the client and the server.
+The client wants to receive a possible bet as soon as it is available. The client then wants to send
+the amount and the vehicle it is betting on. Last but not least, the client also wants to get notifications once
+they win or lose. The client data also needs to be persistent, stored safely in a database.</p>
+
+<p>I believe this is enough of the specifications for now. I’ll return next week, maybe even with mockups! We’ll see.</p>
+
+  </div><a class="u-url" href="/via/2021/10/07/via-progress-00.html" hidden></a>
 </article>
 
       </div>
